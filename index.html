@@ -532,8 +532,8 @@
                 <label>Chọn ngày hẹn 📅</label>
                 <input type="date" id="dateInput" class="input-control" onchange="updateDateTimeSummary()">
                 <div class="quick-chips">
-                    <span class="chip" onclick="setQuickDate(1)">Tối mai</span>
-                    <span class="chip" onclick="setQuickDate(2)">Ngày kia</span>
+                    <span class="chip" onclick="setQuickDate(0)">Ngàynay</span>
+                    <span class="chip" onclick="setQuickDate(1)">Ngày mai</span>
                     <span class="chip" onclick="setQuickDate(5)">Thứ 7 này</span>
                 </div>
             </div>
@@ -847,7 +847,7 @@
             document.querySelectorAll('.food-card').forEach(el => el.classList.remove('selected'));
             card.classList.add('selected');
             selectedFood = foodName;
-            document.getElementById('foodPreview').innerText = `Món ngon được chọn: ${foodName} ✨`;
+            document.getElementById('foodPreview').innerText = `Món: ${foodName} ✨`;
         }
 
         function updateSummary() {
